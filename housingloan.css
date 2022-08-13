@@ -1,0 +1,691 @@
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/*
+div{
+    animation-name:fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+*/
+a {
+    text-decoration: none;
+  }
+
+
+body{
+    width: 100%;
+    background-color:white;
+    font-family: 'Noto Sans JP';
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    max-width: 750px;
+    margin: auto;
+}
+
+
+
+.sp-header-fixed{
+    height: 80px;
+}
+.sp-header-fixed img{
+    width: auto !important;
+    height: 40px ;
+    margin: 20px 30px;
+}
+.menu-icon {
+    color: gray;
+    float: right;
+    margin: 20px 30px; /*サイズうまくいってない。後で修正*/
+}
+
+.firstview{
+    height: 450px;
+    background-size: 750px;
+    background-image: url(http://www.financial-agency.com/service/wp-content/uploads/2022/08/top.jpg);
+}
+
+.housingloan-logo{
+    margin-left: 55px;
+    padding-top: 45px;
+}
+.jibunbk-logo{
+    width: 170px;
+    padding-left: 5px;
+}
+.housingloan-logo p{
+    font-size: 60px;
+    padding-left: 5px;
+    background-color:rgba(218,95,41,1.0);
+    width: 380px;
+    letter-spacing: 10px;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+}
+.kakakucom{
+    float: left;
+    width: auto;
+    height: 230px;
+    margin-left: 12px;
+    margin-top: 20px;
+}
+.oricon{
+    float: left;
+    width: auto;
+    height: 215px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+/*変動金利*/
+.interestrate{
+    background-color:rgba(255, 242, 204,0.4);
+    width: 700px;
+    height: 300px;
+    margin: auto;
+}
+.interestrate-text{
+    width: 230px;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 100px;
+    float: left;
+}
+.interestrate-text1{
+    font-size: 35px;
+    font-weight: 700;
+}
+.interestrate-text2{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/*au金利優遇割なら*/
+.interestrate h4{
+    color: white;
+    font-size: 24px;
+    font-weight: 5;
+    margin-left: 37%;
+    margin-top: 30px;
+    width: 320px;
+    border-radius: 30px;
+    text-align: center;
+    background-color:rgba(218,95,41,1.0);
+}
+
+.orange{
+    position: relative; 
+    height: 140px;
+    float: left;
+}
+.orange1{
+    color: white;
+    background-color:rgba(218,95,41,1.0);
+    border-radius: 50%;
+    font-size: 30px;
+    padding: 10px;
+}
+.orange2{
+    font-size: 94px;
+    color:rgba(218,95,41,1.0);
+    font-weight: 900;
+    transform: scale(0.8, 1);
+    margin-left: 10px;
+}
+.orange3{
+    font-size: 45px;
+    color:rgba(218,95,41,1.0);
+    font-weight: 900;
+}
+.interestrate h5{
+    margin: 30px 0 0 50px;
+    float:left;
+    font-size: 14px;
+    font-weight: 50;
+}
+
+h6{
+    text-align: right;
+    font-size: 20px;
+    font-weight: 10;
+    margin: 0 10px 40px 0;
+}
+
+.campaign img{
+    display: flex;
+    width: 700px;
+    margin:50px auto 0 auto;
+}
+
+/*仮申込ボタン*/
+.examination p{
+    text-align: center;
+    font-size: 30px;
+}
+.examination-btn{
+    position:relative;
+    background-color:rgba(218,95,41,1.0);
+    border-radius: 48px;
+    color: white;
+    width: 650px;
+    margin: auto;
+    box-shadow: 7px 7px 0 0 rgba(147,66,25,1.0);
+    margin-bottom: 10px;
+}
+.examination .link{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.examination-btn p{
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    padding: 10px 0;
+}
+/*ボタンの右の「>」*/
+.btn1{
+    position: relative;
+}
+.btn1::before { /* 背景の表示設定 */
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 38px;
+    width: 44px; /* 横幅 */
+    height: 44px; /* 高さ */
+    border-radius: 50%; /* 角の丸み */
+    background: white;
+}
+.btn1::after { /* くの字の表示設定 */
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 54px;
+    width: 16px;
+    height: 16px;
+    border-top: 6px solid rgba(218,95,41,1.0);
+    border-right: 6px solid rgba(218,95,41,1.0);
+    transform: rotate(45deg);
+}
+
+/*電話相談*/
+.telbtn{
+    position:relative;
+    background-color:rgba(218,95,41,1.0);
+    border-radius: 60px;
+    color: white;
+    font-weight:600;
+    width: 650px;
+    margin: auto;
+    box-shadow: 7px 10px 0 0 rgba(147,66,25,1.0);
+    margin-bottom: 10px;
+    text-align: center;
+}
+.telbtn .link2{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.btn2{
+    font-size: 48px;
+    padding:10px 0 0 50px;
+}
+.btn3{
+    font-size:30px;
+    padding:0 0 10px 50px ;
+}
+.telicon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    margin: 40px 0 0 45px;
+}
+.teltime{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 50px 0;
+}
+
+h1{
+    border-left: 8px solid rgba(218,95,41,1.0);
+    font-size: 32px;
+    height:60px;
+    margin-left: 30px;
+    padding-left: 10px;
+}
+
+.merit img{
+    display: flex;
+    width: 700px;
+    margin: 30px auto;
+}
+
+h2{
+    margin: auto;
+    width: 600px;
+    font-size: 26px;
+    font-weight: 200;
+    margin-bottom: 50px;
+}
+
+.simulation p{
+    text-align: center;
+    font-size: 30px;
+}
+.simulation-btn{
+    position:relative;
+    background-color:rgba(218,95,41,1.0);
+    border-radius: 48px;
+    color: white;
+    width: 650px;
+    margin: auto;
+    box-shadow: 7px 7px 0 0 rgba(147,66,25,1.0);
+    margin-bottom: 10px;
+}
+.simulation .link2{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.simulation-btn p{
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    padding: 20px 0;
+}
+.calculator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    margin: 20px 0 0 45px;
+}
+
+
+
+
+
+/*ポイントヘッダー*/
+.pointtitle{
+    width: 700px;
+    height: 250px;
+    margin:100px auto 0 auto;
+    cursor: pointer;
+    position: relative;
+}
+.body{
+    margin: auto;
+}
+.pointtitle::before,.pointtitle::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+    width: 35px;
+    height: 6px;
+    background: rgba(218,95,41,1.0);
+    transition: 0.2s ease transform;
+}
+.pointtitle::before{
+    top:49%;
+    right: 20px;
+    transform: rotate(0deg);
+}
+.pointtitle::after{
+    top:49%;
+    right: 20px;
+    transform: rotate(90deg);
+}
+.pointno{
+    width: 200px;
+    background-color:rgba(218,95,41,1.0);
+    font-size: 24px;
+    padding:10px 0 ;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 100;    
+    z-index: 10000;
+    position: relative;
+}
+.pointtext{
+    position: absolute;
+    border: 6px solid rgba(218,95,41,1.0);
+    border-radius: 20px;
+    font-size: 22px;
+    margin: -30px 0 100px 0;
+    padding: 35px 0 30px 170px;
+    line-height:60px;
+    width: 518px;
+}
+.dot-text{
+    position: relative;
+}
+.dot-text::before{
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    padding-top: 10px;
+    background: -webkit-radial-gradient(circle 5px,black 50%,transparent 50%);
+    background: radial-gradient(circle 5px,black 50%,transparent 50%);
+    background: -moz-radial-gradient(circle 5px,black 50%,transparent 50%);
+}
+.orange4{
+    font-size: 36px;
+    font-weight: 900;
+    color:rgba(218,95,41,1.0);
+}
+.pointimg{
+    float: left;
+    width: 120px;
+    margin: 10px 0 0 25px;
+}
+
+/*ポイント1の表*/
+.point1table table{
+    border-collapse: collapse;
+    width: 700px; 
+    max-width: 100%;
+    margin:auto;
+    text-align: center; 
+    white-space: nowrap; 
+}
+.point1table th,td{
+    padding: 5px;
+    border: 1px solid rgb(25, 25, 25);
+}
+.merging{
+    border-top:0px;
+    border-bottom: 0px;
+}
+.merging2{
+    width: 7%;
+    border-top:0px;
+    border-bottom:1px solid rgb(25, 25, 25);
+}
+.point1table th{
+    background-color:rgb(127, 127, 127);
+    color: white;
+    padding:10px ;
+}
+.th1{
+    font-size: 36px;
+    line-height:1;
+}
+.th2{
+    font-size: 20px;
+    font-weight: 100;
+}
+.torange{
+    color:rgba(218,95,41,1.0);
+    font-size: 48px;
+    font-weight: bolder;
+    transform: scale(0.6, 1);
+}
+.tblack{
+    font-size: 36px;
+    font-weight: bold;
+}
+.tblack2{
+    font-size: 12px;
+    line-height:1;
+}
+
+.point1text{
+    border: 3px solid rgba(218,95,41,1.0);
+    margin: auto;
+    margin-bottom: 100px;
+    width: 650px;
+    font-size: 20px;
+    padding: 10px;
+}
+.point1text ul{
+    margin-left: 40px;
+}
+
+
+.point2subtitle{
+    margin:30px auto;
+    width: 650px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+}
+.point2subtitle p{
+    display: inline-block;
+}
+.point2notext{
+    font-size: 34px;
+    text-align: left;
+    padding: 10px 30px;
+}
+.right0en{
+    color:rgba(218,95,41,1.0);
+    font-size: 45px;
+    font-weight: bolder;
+    float: right;
+    padding: 3px 20px;
+}
+
+.point2 h2{
+    margin-bottom: 20px;
+}
+.point2table table{
+    border-collapse: collapse;
+    width: 650px; 
+    max-width: 100%;
+    margin:auto;
+    text-align: center; 
+    white-space: nowrap;
+    font-size: 20px;
+}
+.point2table th,td{
+    padding: 10px;
+}
+.point2table ul{
+    padding-left: 20px;
+    text-align: left;
+}
+.torange2{
+    color:rgba(218,95,41,1.0);
+    font-size: 24px;
+    font-weight: bolder;
+    transform: scale(0.6, 1);
+}
+.tblack3{
+    font-weight: bold;
+    font-size: 28px;
+}
+.th3{
+    border: 1px solid rgb(25, 25, 25);
+    background-color: #7F7F7F;
+    color: white;
+    font-weight: normal;
+    height: 50px;
+}
+
+.caution{
+    width: 600px;
+    margin: auto;
+    font-size: 14px;
+    margin-bottom: 70px;
+}
+.caution1{
+    padding-left:40px; /* ケースによって調整する */
+	text-indent:-40px; /* ケースによって調整する */
+}
+.caution2{
+    display: inline-block;
+	width: 40px; /* ケースによって調整する */
+	text-indent: 0;
+}
+
+
+.steptitle{
+    background-color: #FBE5D6;
+    width: 620px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+.stepno{
+    font-size: 14px;
+    background-color: rgba(218,95,41,1.0);
+    color: white;
+    border-radius: 14px;
+    width: 120px;
+    text-align: center;
+    float: left;
+    margin-left: 20px;
+    padding: 3px;
+    position: relative;
+}
+.stepturn1{
+    position:absolute;
+    width: 50px;
+    height: 380px;
+    background-color: #FBE5D6;
+    margin-left: -10px;
+}
+.stepturn2{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 42px solid;
+    border-color:  #FBE5D6 transparent transparent transparent;
+    margin:380px 0 0 -27px ;
+}
+.stepblock{
+    margin: 20px auto;
+}
+.steptext{
+    margin-left: 170px;
+    padding: 10px 20px;
+    width: 480px;
+    background-color: #F2F2F2;
+    font-size: 20px;
+}
+.steptext1{
+    font-weight: bold;
+}
+.steptext2{
+    font-weight: normal;
+    font-size: 17px;
+}
+.orange5{
+    color: rgba(218,95,41,1.0);
+}
+.steptext3{
+    font-size: 10px;
+}
+.stepend{
+    background-color: #FBE5D6;
+    width: 650px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.step caution{
+    margin-bottom: 100px;
+}
+
+.corporate-info{
+    margin-top: 100px;
+}
+
+
+
+.corp-table table{
+    border-collapse: collapse;
+    width: 630px; 
+    max-width: 100%;
+    margin:auto;
+    text-align: left; 
+    font-size: 14px;
+}
+.corp-table th,td{
+    padding: 10px;
+    border: 1px solid black;
+}
+.corp-table th{
+    background-color: #E7E7E7;
+    text-align: center;
+    white-space: nowrap;
+    width: 35%;
+}
+.corp-table ul{
+    padding-left: 20px;
+    text-align: left;
+}
+.corp-table-list1{
+    list-style:none;
+}
+.corp-table-list1 li{
+    padding-left:30px; /* ケースによって調整する */
+	text-indent:-30px; /* ケースによって調整する */
+}
+.corp-table-list1 span{
+    display: inline-block;
+	width: 30px; /* ケースによって調整する */
+	text-indent: 0;
+}
+.corp-table-list2{
+    list-style:none;
+}
+.corp-table-list2 li{
+    padding-left:30px; /* ケースによって調整する */
+	text-indent:-30px; /* ケースによって調整する */
+}
+.corp-table-list2 span{
+    display: inline-block;
+	width: 30px; /* ケースによって調整する */
+	text-indent: 0;
+}
+
+.disclosure{
+    margin:30px 0 150px 80px;
+}
