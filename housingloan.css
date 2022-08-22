@@ -253,7 +253,7 @@ h1{
     transform: scale(1, 1.3);
     display: inline-block;
 }
-.orange3 sup{
+.orange sup{
     position: absolute;
     right: 0;
 }
