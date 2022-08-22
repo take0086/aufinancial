@@ -13,13 +13,24 @@
         <div class="container">
         <div class="sp sp-header-fixed">
             <a href="#"><img src="http://www.financial-agency.com/service/wp-content/uploads/2022/08/aufinancial-logo.png" alt=""></a>
-            <i class="fa fa-bars menu-icon"></i>
+            <div class="nav">
+                <input id="drawer_input" class="drawer_hidden" type="checkbox">
+                <label for="drawer_input" class="drawer_open"><span></span></label>
+                <nav class="nav_content">
+                  <ul class="nav_list">
+                    <li class="nav_item"><a href="#">メニュー1</a></li>
+                    <li class="nav_item"><a href="#">メニュー2</a></li>
+                    <li class="nav_item"><a href="#">メニュー3</a></li>
+                  </ul>
+                </nav>
+              </div>
         </div>
         <div class="top-wrapper">
             <div class="firstview">
+                <img class="firstview-img" src="http://www.financial-agency.com/service/wp-content/uploads/2022/08/top.jpg" alt="">
                 <div class="housingloan-logo">
                     <img class="jibunbk-logo" src="http://www.financial-agency.com/service/wp-content/uploads/2022/08/aujibunbank-logo.png" alt="">
-                    <p>住宅ローン</p>
+                    <h1>住宅ローン</h1>
                 </div>
                 <div class="emblem">
                     <img class="kakakucom" src="http://www.financial-agency.com/service/wp-content/uploads/2022/08/kakakucom-rank.png" alt="">
@@ -33,9 +44,12 @@
                 </div>
                 <div class="interestrate-right">
                     <h4>au金利優遇割なら</h4>
-                    <p class="orange"><span class="orange1">年</span><span class="orange2">0.289</span><span class="orange3">%</span>*1*2</p>
-                    <h5>*1　2022年6月現在の金利であり、実際のお借入日の金利により変動します。<br>
-                        *2　金利引き下げキャンペーン適用の場合</h5>
+                    <p class="orange"><span class="orange1">年</span><span class="orange2">0.289</span><span class="orange3">%</span><sup>*1*2</sup></p>
+                    <p>2022年6月適用</p>
+                </div>
+                <div class="caution1">
+                    <p class="caution1-1"><span class="caution1-2">*1</span>2022年6月現在の金利であり、実際のお借入日の金利により変動します。</p>
+                    <p class="caution1-1"><span class="caution1-2">*2</span>金利引き下げキャンペーン適用の場合</p>
                 </div>
             </div>
         </div>
@@ -61,7 +75,7 @@
         </div>
         <p class="teltime">受付時間 │ 9:00~20:00（12月30日~1月3日を除く）</p>
         <div class="merit">
-            <h1>住宅ローン借換えのメリット</h1>
+            <h5>住宅ローン借換えのメリット</h5>
             <img class="sp" src="http://www.financial-agency.com/service/wp-content/uploads/2022/08/graph1.png" alt="">
             <h2>実は、住宅ローンの金利は、30年前と比較すると約6%も下がっているうえ、バブル期にはほとんど存在しなかった金利優遇制度もあります。</h2>
             <img class="sp" src="http://www.financial-agency.com/service/wp-content/uploads/2022/08/graph2.png" alt="">
@@ -87,7 +101,7 @@
                     </p>
                     <img class="pointimg" src="http://www.financial-agency.com/service/wp-content/uploads/2022/08/au-1.png" alt="">
                 </dt>
-                <dd class="body">
+                <dd class="pointbody">
                     <h2>新規でも借換えでも、魅力的な金利をご用意しております。</h2>
                     <div class="point1table">
                         <table>
@@ -108,12 +122,12 @@
                             </tr>
                             <tr>
                                 <td class="merging2" rowspan="2"></td>
-                                <td>auモバイル<br>優遇割<br><span class="tblack2">（年0.07%引下げ）</span></td>
+                                <td class="inline-title">auモバイル<br>優遇割<br><span class="tblack2">（年0.07%引下げ）</span></td>
                                 <td>年<span class="tblack">0.340</span>%</td>
                                 <td>年<span class="tblack">0.695</span>%</td>
                             </tr>
                             <tr>
-                                <td>じぶんでんき<br>優遇割<br><span class="tblack2">（年0.03%引下げ）</span></td>
+                                <td class="inline-title">じぶんでんき<br>優遇割<br><span class="tblack2">（年0.03%引下げ）</span></td>
                                 <td>年<span class="tblack">0.380</span>%</td>
                                 <td>年<span class="tblack">0.735</span>%</td>
                             </tr>
@@ -138,7 +152,7 @@
                     </p>
                     <img class="pointimg" src="http://www.financial-agency.com/service/wp-content/uploads/2022/08/au-1.png" alt="">
                 </dt>
-                <dd class="body">
+                <dd class="pointbody">
                     <div class="point2subtitle">
                         <p class="point2notext">① がん50%保障団信の保険料</p>
                         <p class="right0en">¥0</p>
@@ -147,8 +161,8 @@
                     <div class="point2table">
                         <table>
                             <tr>
-                                <th></th>
-                                <th class="th3">がん50%保障団信</th>
+                                <th class="merging3"></th>
+                                <th class="th4">がん50%保障団信</th>
                             </tr>
                             <tr>
                                 <td><ul>
@@ -187,12 +201,12 @@
                         <p class="point2notext">⑥ 収入印紙代<sup>*5</sup></p>
                         <p class="right0en">¥0</p>
                     </div>
-                    <div class="caution">
-                        <p class="caution1"><span class="caution2">*1</span>精神障害を除きます。</p>
-                        <p class="caution1"><span class="caution2">*2</span>最初の31日は連続した入院である必要があります。</p>
-                        <p class="caution1"><span class="caution2">*3</span>審査の結果、保証会社をご利用いただく場合は、保証料相当額を上乗せした金利が設定されますが、別途お支払いいただく保証料はございません。</p>
-                        <p class="caution1"><span class="caution2">*4</span>「定額自動入金サービス」をご利用の場合</p>
-                        <p class="caution1"><span class="caution2">*5</span>契約書でのお手続きが必要になった場合など、別途、収入印紙代が発生することがあります。</p>
+                    <div class="caution2">
+                        <p class="caution2-1"><span class="caution2-2">*1</span>精神障害を除きます。</p>
+                        <p class="caution2-1"><span class="caution2-2">*2</span>最初の31日は連続した入院である必要があります。</p>
+                        <p class="caution2-1"><span class="caution2-2">*3</span>審査の結果、保証会社をご利用いただく場合は、保証料相当額を上乗せした金利が設定されますが、別途お支払いいただく保証料はございません。</p>
+                        <p class="caution2-1"><span class="caution2-2">*4</span>「定額自動入金サービス」をご利用の場合</p>
+                        <p class="caution2-1"><span class="caution2-2">*5</span>契約書でのお手続きが必要になった場合など、別途、収入印紙代が発生することがあります。</p>
                     </div>
                 </dd>
             </dl>
@@ -205,7 +219,7 @@
                     </p>
                     <img class="pointimg" src="http://www.financial-agency.com/service/wp-content/uploads/2022/08/au-2.png" alt="">
                 </dt>
-                <dd class="body">
+                <dd class="pointbody">
                     <h2>ご自宅からスマートフォンやパソコンでお手続きが可能です。</h2>
                     <div class="step">
                         <div class="steptitle">
@@ -253,8 +267,8 @@
                         <div class="stepend">
                             <p>ご契約成立！</p>
                         </div>
-                        <div class="caution">
-                            <p class="caution1"><span class="caution2">*1</span>連帯保証人を立てる場合などご契約内容によっては、契約書でのお手続きとなる場合があります。また、お客さまとauじぶん銀行間の住宅ローン契約に付随するauじぶん銀行指定の司法書士との抵当権設定に関する面談はネット手続きができません。</p>
+                        <div class="caution2">
+                            <p class="caution2-1"><span class="caution2-2">*1</span>連帯保証人を立てる場合などご契約内容によっては、契約書でのお手続きとなる場合があります。また、お客さまとauじぶん銀行間の住宅ローン契約に付随するauじぶん銀行指定の司法書士との抵当権設定に関する面談はネット手続きができません。</p>
                         </div>
                     </div>
                 </dd>
@@ -274,7 +288,7 @@
                 <a class="link2" href="tel:0120xxxxxx"></a>
             </div>
             <div class="corporate-info">
-                <h1>銀行代理業の概要</h1>
+                <h5>銀行代理業の概要</h5>
                 <div class="corp-table">
                     <table>
                         <tr>
