@@ -534,15 +534,15 @@ h2{
 }
 .dot-text::before{
     position: absolute;
-    top: -15px;
+    /* top: -15px; */
     left: 0;
     right: 0;
     margin: auto;
     content: "";
-    padding-top: 10px;
-    background: -webkit-radial-gradient(circle 5px,black 50%,transparent 50%);
-    background: radial-gradient(circle 5px,black 50%,transparent 50%);
-    background: -moz-radial-gradient(circle 5px,black 50%,transparent 50%);
+    padding-top: 1.5rem;
+    background: -webkit-radial-gradient(circle min(0.6vw,0.5rem),black 50%,transparent 50%);
+    background: radial-gradient(circle min(0.6vw,0.5rem),black 50%,transparent 50%);
+    background: -moz-radial-gradient(circle min(0.6vw,0.5rem),black 50%,transparent 50%);
 }
 .orange4{
     color: #EB5505;
@@ -830,12 +830,12 @@ h2{
     list-style:none;
 }
 .corp-table-list1 li{
-    padding-left:min(4.7vw,3rem); /* ケースによって調整する */
-	text-indent:max(-4.7vw,-3rem); /* ケースによって調整する */
+    padding-left:min(4vw,3rem); /* ケースによって調整する */
+	text-indent:max(-4vw,-3rem); /* ケースによって調整する */
 }
 .corp-table-list1 span{
     display: inline-block;
-	width: min(4.7vw,3rem); /* ケースによって調整する */
+	width: min(4vw,3rem); /* ケースによって調整する */
 	text-indent: 0;
 }
 .corp-table-list2{
@@ -843,12 +843,12 @@ h2{
     list-style:none;
 }
 .corp-table-list2 li{
-    padding-left:min(4.7vw,3rem); /* ケースによって調整する */
-	text-indent:max(-4.7vw,-3rem); /* ケースによって調整する */
+    padding-left:min(4vw,3rem); /* ケースによって調整する */
+	text-indent:max(-4vw,-3rem); /* ケースによって調整する */
 }
 .corp-table-list2 span{
     display: inline-block;
-	width: min(4.7vw,3rem); /* ケースによって調整する */
+	width: min(4vw,3rem); /* ケースによって調整する */
 	text-indent: 0;
 }
 
