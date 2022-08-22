@@ -120,6 +120,8 @@ img{
 
 
 
+
+
 .firstview{
     position: relative;
 }
@@ -129,10 +131,14 @@ img{
     max-height: 45rem;
     object-fit: cover;
 }
-.depositaccount-logo{
+.firstview-block{
+    max-width: 75rem;
+    margin: auto;
+}
+.housingloan-logo{
     position: absolute;
-    top:60%;
-    margin-left:45%;
+    top: 10%;
+    margin-left: 6%;
     width: 51%;
     max-width: 38rem;
     background-color: white;
@@ -143,72 +149,118 @@ img{
     padding: 0.5rem 1rem;
 }
 h1{
-    font-size: min(8vw,60px);
+    font-size: min(8vw,6rem);
     padding-left: 0.5rem;
     background-color: #EB5505;
-    letter-spacing: 1.3vw;
+    letter-spacing: min(1.3vw,1rem);
     text-align: center;
     font-weight: bold;
     color: white;
 }
 
-.satisfaction{
-    display: flex;
-    margin: min(6vw,5rem) auto;
-    max-height: 25rem;
+.emblem{
+    position: absolute;
+    top: 40%;
+    width: 100%;
     max-width: 75rem;
+    margin-top: min(1vw,1rem);
 }
-.womansearch{
-    max-width: 28rem;
-    width: 37%;
-    height: 100%;
-}
-.satisfaction-text{
-    width: 47rem;
-}
-.satisfaction-text1{
-    width: 60vw;
-    max-width: 45rem;
-    background-color: #F2F2F2;
-    border-radius: 2rem;
-    text-align: center;
-    font-weight: bold;
-    padding: 0.5rem 0;
-}
-.black1{
-    font-size: min(2.9vw,2.2rem);
-}
-.black2{
-    font-size: min(2.1vw,1.6rem);
-}
-.black3{
-    font-size: min(3.3vw,2.5rem);
-}
-.satisfaction-text2{
+.kakakucom{
     float: left;
-    text-align: right;
-    font-size: min(4vw,3rem);
-    margin: min(2.6vw,2rem) min(2.6vw,2rem);
+    max-width: 25rem;
+    width: 33%;
+    height: auto;
+    margin-left: min(1vw,1rem);
+    padding-top: min(2vw,1.5rem);
+}
+.oricon{
+    max-width: 18.8rem;
+    height: auto;
+    width: 25%;
+    margin-left: min(1vw,1rem);
+}
+
+/*変動金利*/
+.interestrate{
+    background-color: rgba(255, 242, 204,0.4);
+    width: 93%;
+    max-width: 70rem;
+    height: 41vw;
+    max-height: 31rem;
+    margin: min(4vw,3rem) auto;
+}
+.interestrate-text{
+    text-align: center;
+    margin-left: min(3.3vw,2.5rem);
+    margin-top: min(14vw,10rem);
+    float: left;
+}
+.interestrate-text1{
+    font-size: min(4.6vw,3.5rem);
     font-weight: bold;
 }
-.satisfaction-text3 {
+.interestrate-text2{
+    font-size: min(2.6vw,2rem);
+    font-weight: normal;
+}
+
+/*au金利優遇割なら*/
+.interestrate-right{
+    position: absolute;
+    margin-left: min(38vw,27rem);
+    max-width: 44rem;
+}
+.interestrate h4{
+    color: white;
+    font-size: min(3.2vw,2.4rem);
+    font-weight: normal;
+    /* margin-left: 37%; */
+    margin-top: min(4vw,3rem);
+    width: min(42vw,32rem);
+    border-radius: 3rem;
+    text-align: center;
+    background-color: #EB5505;
+}
+.interestrate-right p{
+    text-align: right;
+    font-size: min(2.8vw,2rem);
+    font-weight: normal;
+}
+
+.orange{
     display: inline-block;
 }
 .orange1{
-    color:#EB5505;
-    font-weight: bold;
-    font-size: min(5.3vw,4rem);
+    color: white;
+    background-color: #EB5505;
+    border-radius: 50%;
+    font-size: min(4vw,3rem);
+    padding: min(1.4vw,1rem);
+    transform: scale(1,0.9);
+    display: inline-block;
 }
 .orange2{
-    color:#EB5505;
+    font-size: min(12.5vw,9.4rem);
+    color: #EB5505;
     font-weight: bold;
-    font-size: min(10vw,8rem);
+    transform: scale(1, 1.2);
+    display: inline-block;
 }
+.orange3{
+    font-size: min(7.3vw,5.5rem);
+    color: #EB5505;
+    font-weight: bold;
+    transform: scale(1, 1.3);
+    display: inline-block;
+}
+
 .caution1{
     margin: auto;
-    width: min(52vw,40rem);
+    width: min(80vw,60rem);
     font-size: min(3.1vw,2rem);
-    display: inline-block;
+    position: absolute;
+    margin-top: min(33vw,25rem);
+    margin-left: min(8vw,6rem);
 }
 .caution1-1{
     padding-left: min(4vw,3rem);
@@ -220,13 +272,32 @@ h1{
     text-indent: 0;
 }
 
+
+h6{
+    text-align: right;
+    font-size: min(2.8vw,2rem);
+    font-weight: normal;
+    margin: 0 auto min(5.6vw,4rem) auto;
+    width: 90vw;
+    max-width: 68rem;
+}
+
+.campaign{
+    width: 93vw;
+    max-width: 70rem;
+    margin: min(6vw,5rem) auto;
+}
+.campaign img{
+    width: 100%;
+}
+
 /*仮申込ボタン*/
-.accountopening p{
+.examination p{
     clear: both;
     text-align: center;
     font-size: min(4vw,3rem);
 }
-.accountopening-btn{
+.examination-btn{
     position:relative;
     background-color:#EB5505;
     border-radius: 4.8rem;
@@ -237,7 +308,7 @@ h1{
     box-shadow: 0.7rem 0.7rem 0 0 #9F3B03;
     margin-bottom: 1rem;
 }
-.accountopening .link{
+.examination .link{
     display: block;
     position: absolute;
     top: 0;
@@ -245,7 +316,7 @@ h1{
     width: 100%;
     height: 100%;
 }
-.accountopening-btn p{
+.examination-btn p{
     font-size: min(6.4vw,4.8rem);
     font-weight:bold;
     letter-spacing: min(0.5vw,0.4rem);
@@ -261,7 +332,7 @@ h1{
     margin: auto;
     top: 0;
     bottom: 0;
-    right: min(5.8vw,3.8rem);
+    right: min(3.8vw,2.5rem);
     width: min(6.7vw,4.4rem);
     height: min(6.7vw,4.4rem);
     border-radius: 50%; /* 角の丸み */
@@ -273,7 +344,7 @@ h1{
     margin: auto;
     top: 0;
     bottom: 0;
-    right: min(8.3vw,5.4rem);
+    right: min(6.1vw,4rem);
     width: min(2.4vw,1.6rem);
     height: min(2.4vw,1.6rem);
     border-top: min(0.9vw,0.6rem) solid #EB5505;
@@ -323,15 +394,77 @@ h1{
     margin: 2rem 0 3rem 0;
 }
 
-h6{
-    text-align: right;
-    font-size: min(2.6vw,2rem);
-    font-weight: normal;
-    /* max-width: 65rem; */
-    margin: 0 auto 40px auto;
-    padding-left: 10px;
-    width: min(86vw,65rem);
+h5{
+    border-left: 0.8rem solid #EB5505;
+    font-size: min(4.2vw,3.2rem);
+    height: 8%;
+    max-height: 60rem;
+    width: 86%;
+    max-width: 65rem;
+    margin: auto;
+    padding: min(0.4vw,0.3rem) min(1.5vw,1rem);
+    margin-bottom: min(1.5vw,1rem);
 }
+
+.merit{
+    width: 93vw;
+    max-width: 70rem;
+    margin: min(6vw,5rem) auto;
+}
+.merit img{
+    width: 100%;
+}
+
+h2{
+    margin: auto;
+    width: 80%;
+    max-width: 65rem;
+    font-size: min(3.4vw,2.6rem);
+    font-weight: normal;
+    margin-bottom: min(6.6vw,5rem);
+}
+
+.simulation p{
+    clear: both;
+    text-align: center;
+    font-size: min(4vw,3rem);
+}
+.simulation-btn{
+    position: relative;
+    background-color: #EB5505;
+    border-radius: 4.8rem;
+    color: white;
+    max-width: 65rem;
+    width: 85%;
+    margin: auto;
+    box-shadow: 0.7rem 0.7rem 0 0 #9f3b03;
+    margin-bottom: 1rem;
+}
+.simulation .link2{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.simulation-btn p{
+    font-size: min(4.5vw,3.4rem);
+    font-weight: bold;
+    padding: 1rem 0;
+}
+.calculator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: min(4.2vw,3rem);
+    margin: min(2.8vw,1.2rem) 0 0 min(6vw,4.5rem);
+}
+.simulation{
+    margin-bottom: min(4.5vw,3.4rem);
+}
+
+
 
 
 /*ポイントヘッダー*/
@@ -343,7 +476,8 @@ h6{
     position: relative;
 }
 .pointbody{
-    margin: auto;
+    margin: auto;    
+    margin-bottom: min(15vw,10rem);
 }
 .pointtitle::before,.pointtitle::after{
     content: "";
@@ -354,7 +488,7 @@ h6{
     /* transform: translate(0, -50%); */
     width: min(4.6vw,3.5rem);
     height: min(0.8vw,0.6rem);
-    background: rgba(218,95,41,1.0);
+    background: #EB5505;
     transition: 0.2s ease transform;
 }
 .pointtitle::before{
@@ -395,17 +529,25 @@ h6{
     max-width: 70rem;
     width: 74%;
 }
-.orange3{
-    background-color: #EB5505;
-    color: white;
-    border-radius: 2rem;
-    padding: 0.7% 2%;
-    margin-left: 2.2%;
+.dot-text{
+    position: relative;
+}
+.dot-text::before{
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    padding-top: 10px;
+    background: -webkit-radial-gradient(circle 5px,black 50%,transparent 50%);
+    background: radial-gradient(circle 5px,black 50%,transparent 50%);
+    background: -moz-radial-gradient(circle 5px,black 50%,transparent 50%);
 }
 .orange4{
     color: #EB5505;
     font-weight: bold;
-    font-size: min(6.8vw,4.8rem);
+    font-size: min(5.1vw,3.6rem);
     display: inline-block;
 }
 .pointimg{
@@ -414,17 +556,8 @@ h6{
     margin: 1.4% 0 0 3.5%;
 }
 
-h2{
-    margin: min(4vw,0.4rem) auto;
-    width: 80%;
-    max-width: 60rem;
-    font-size: min(3.4vw,2.6rem);
-    font-weight: normal;
-}
-
-
 /*ポイント1の表*/
-.point1table1 table{
+.point1table table{
     border-collapse: collapse;
     width: 86%;
     max-width: 65rem;
@@ -433,153 +566,243 @@ h2{
     white-space: nowrap;
     font-size: min(3vw,2rem);
 }
-.point1table1 th, .point1table1 td{
+.point1table th,.point1table td{
     padding: min(1.5vw,1rem);
     border: 1px solid rgb(25, 25, 25);
 }
-.point1table1 td{
-    width: 20%;
+.merging{
+    border-bottom: 0px!important;
 }
-.torange{
-    background-color: #EB5505;
+.merging2{
+    width: 7%;
+    border-top: 0px !important;
+}
+.point1table th{
+    background-color:rgb(127, 127, 127);
     color: white;
 }
-.tsilver{
-    background-color: #BFBFBF;
-    color: white;
+.th1{
+    font-size: min(5.5vw,3.6rem);
+    line-height:1;
 }
-.tgold{
-    background-color: #EAB200;
-    color: white;
-}
-.tpurple{
-    background-color: #AA72D4;
-    color: white;
-}
-.orange5{
-    color:#EB5505;
-    font-size: min(3.7vw,2.4rem);
-    font-weight: bold;
-}
-.orange6{
-    color:#EB5505;
-    font-size: min(4.6vw,3rem);
-    font-weight: bold;
-}
-
-/*ポイント1の表2*/
-.point1table2 table{
-    border-collapse: collapse;
-    width: 86%; 
-    max-width: 65rem;
-    margin: min(5vw,4rem) auto;
+.th2{
     font-size: min(3vw,2rem);
-}
-.point1table2 th, .point1table2 td{
-    padding: min(3vw,2rem);
-    border: 2px solid rgb(25, 25, 25);
-}
-.point1table2-header{
-    text-align: center;
-}
-.point1table2 th{
-    background-color: #F2F2F2;
-    text-align: center;
-    width: 25%;
     font-weight: normal;
 }
+.torange{
+    color: #EB5505;
+    font-size: min(6.7vw,4.4rem);
+    font-weight: bolder;
+    transform: scale(1, 1.2);
+    display: inline-block;
+}
+.inline-title{
+    line-height: 1;
+}
+.tblack{
+    font-size: min(4.9vw,3.2rem);
+    font-weight: bold;
+    transform: scale(1, 1.2);
+    display: inline-block;
+}
+.tblack2{
+    font-size: min(1.8vw,1.2rem);
+    line-height: 1;
+}
 
-/*ポイント2の表*/
+.point1text{
+    border: 3px solid #EB5505;
+    margin: auto;
+    width: 86%;
+    max-width: 65rem;
+    font-size: min(5.5vw,3.6rem);
+    padding: 10px;
+}
+.point1text ul{
+    margin-left: min(6.1vw,4rem);
+    font-size: min(4.6vw,3rem);
+}
+
+
+
+
+.point2subtitle{
+    margin: min(4vw,3rem) auto;
+    width: 86%;
+    max-width: 65rem;
+    background-color: #F2F2F2;
+    border-radius: 1rem;
+}
+.point2subtitle p{
+    display: inline-block;
+}
+.point2notext{
+    font-size: min(4.5vw,3.4rem);
+    text-align: left;
+    padding: min(2.6vw,1rem) min(4.6vw,3rem);
+}
+.right0en{
+    color: #EB5505;
+    font-size: min(6.9vw,4.5rem);
+    font-weight: bolder;
+    float: right;
+    padding: 0 min(3vw,2rem);
+}
+
+.point2 h2{
+    margin-bottom: min(2.6vw,2rem);
+}
+
+
 .point2table table{
     border-collapse: collapse;
     width: 86%; 
     max-width: 65rem;
-    font-size: min(3vw,2rem);
-    text-align: center;
-    margin: min(5vw,4rem) auto;
+    margin:auto;
+    text-align: center; 
     white-space: nowrap;
+    font-size: min(3vw,2rem);
 }
-.point2table th, .point2table td{
+.point2table th,.point2table td{
     padding: min(1.5vw,1rem);
     border: 1px solid rgb(25, 25, 25);
-    width: 20%;
+}
+.merging3{
+    border-top: 0px!important;
+    border-left: 0px!important;
+}
+.point2table ul{
+    padding-left: min(3vw,2rem);
+    text-align: left;
+    font-size: min(4.6vw,3rem);
+}
+.torange2{
+    color:#EB5505;
+    font-size: min(3.6vw,2.4rem);
+    font-weight: bolder;
+}
+.tblack3{
+    font-weight: bold;
+    font-size: min(4.3vw,2.8rem);
+}
+.th4{
+    background-color: #7F7F7F;
+    color: white;
+    font-weight: normal;
+    height: min(6.6vw,5rem);
 }
 
 .caution2{
-    font-size: min(3.1vw,2rem);
-    margin: min(3.3vw,2.5rem) auto;
     width: 80%;
     max-width: 60rem;
+    margin: auto;
+    font-size: min(3.6vw,2.2rem);
 }
 .caution2-1{
-    padding-left: min(8.3vw,3rem);
-    text-indent: min(-0.4vw,-3rem);
+    padding-left: min(6.6vw,4rem);
+    text-indent: max(-6.6vw,-4rem);
 }
 .caution2-2{
     display: inline-block;
-    width: min(8.3vw,3rem);
+    width: min(6.6vw,4rem);
     text-indent: 0;
 }
 
 
-/*ポイント3の表*/
-.tabletitle{
-    margin: 4% auto 0 auto;
-    font-weight: bold;
-    font-size: min(3.2vw,2.4rem);
-    max-width: 65rem;
-    width: 85%;
+.steptitle{
+    background-color: #FBE5D6;
+    width: 82%;
+    max-width: 62rem;
+    margin: auto;
+    text-align: center;
+    font-size: min(4.8vw,3rem);
+    padding: min(1.6vw,1rem) 0;
+    position: relative;
 }
-.point3table table{
-    border-collapse: collapse;
+.stepno{
+    font-size: min(1.8vw,1.4rem);
+    background-color: #EB5505;
+    color: white;
+    border-radius: 1.4rem;
+    width: min(16vw,12rem);
+    text-align: center;
+    float: left;
+    margin-left: min(2.6vw,2rem);
+    padding: min(0.4vw,0.3rem) 0;
+    position: relative;
+}
+.stepturn1{
+    position: absolute;
+    top: 0;
+    left: 8.6%;
+    width: min(6.6vw,5rem);
+    height: 90%;
+    background-color: #FBE5D6;
+    z-index: -10000;
+}
+.stepturn2{
+    position: absolute;
+    /* width: 0; */
+    /* height: 0; */
+    border: min(5.6vw,4.2rem) solid;
+    border-color: #FBE5D6 transparent transparent transparent;
+    top: 90%;
+    left: 6.2%;
+    /* margin-top: 570em; */
+    /* margin-left: 77em; */
+}
+.step-wrapper{
+    position: relative;
+    max-width: 75rem;
+    margin: auto;
+}
+.stepblock{
+    margin: min(2.6vw,2rem) auto;
+    max-width: 73rem;
+    width: 97%;
+}
+.steptext{
+    margin-left: 1.5rem;
+    padding: min(1.3vw,1rem) min(2.6vw,2rem);
+    width: 64%;
+    max-width: 48rem;
+    background-color: #F2F2F2;
+    font-size: min(2.6vw,2rem);
+    position: relative;
+    display: inline-block;
+}
+.steptext1{
+    font-weight: bold;
+}
+.steptext2{
+    font-weight: normal;
+    font-size: min(2.2vw,16px);
+}
+.orange5{
+    color: #EB5505;
+}
+.steptext3{
+    font-size: min(1.3vw,1rem);
+}
+.stepend{
+    background-color: #FBE5D6;
     width: 86%;
     max-width: 65rem;
-    font-size: min(2.2vw,1.4rem);
-    margin: 0 auto 1.5vw auto;
-}
-.point3table th, .point3table td{
-    padding: min(1.5vw,1rem);
-    border: 1px solid rgb(25, 25, 25);
-}
-.merging1{
-    border-bottom: 0px!important;
-}
-.merging2{
-    border-top: 0px!important;
-    writing-mode: tb-rl; 
-    white-space: nowrap;
+    margin: auto;
     text-align: center;
-    letter-spacing: 10px;
-    width: 10%;
-}
-.verticalwriting{
-    -webkit-writing-mode: vertical-lr;
-    -ms-writing-mode: tb-lr;
-    writing-mode: vertical-lr;
-}
-.tright{
-    text-align: right;
-    white-space: nowrap;
-}
-.tblack1{
-    display: inline-block;
-    font-size: min(4.3vw,2.8rem);
+    font-size: min(4vw,3rem);
+    padding: min(1.3vw,1rem);
     font-weight: bold;
-    transform: scale(0.9,1);
+    margin-bottom: min(4vw,3rem) ;
 }
-.table3-border{
-    font-size: min(4.6vw,3rem);
-}
-.orange7{
-    display: inline-block;
-    color:#EB5505;
-    font-size: min(4.6vw,3rem);
-    font-weight: bold;
-    transform: scale(0.9,1);
-}
+
+
 
 
 /*企業情報*/
+.corporate-info{
+    margin-top: min(13vw,10rem);
+}
 .corp-table table{
     border-collapse: collapse;
     width: 84%;
@@ -588,7 +811,7 @@ h2{
     text-align: left;
     font-size: min(2.2vw,1.4rem);
 }
-.corp-table th,.corp-table td{
+.corp-table th, .corp-table td{
     padding: min(1.5vw,1rem);
     border: 1px solid black;
 }
@@ -636,16 +859,4 @@ h2{
 }
 .disclosure p{
     font-size: min(2.6vw,2rem);
-}
-
-h5{
-    border-left: 0.8rem solid #EB5505;
-    font-size: min(4.2vw,3.2rem);
-    height: 8%;
-    max-height: 60rem;
-    width: 86%;
-    max-width: 65rem;
-    margin: auto;
-    padding: min(0.4vw,0.3rem) min(1.5vw,1rem);
-    margin-bottom: min(1.5vw,1rem);
 }
