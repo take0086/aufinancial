@@ -1,14 +1,17 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
 html, body,
 ul, ol, li,
 h1, h2, h3, h4, h5, h6, p, div {
   margin: 0;
   padding: 0;
+  font-size: 62.5%;
 }
 
 html{
   scroll-behavior: smooth;
 }
-/*
+
 div{
     animation-name:fade;
     animation-duration: 3s;
@@ -22,7 +25,7 @@ div{
         opacity: 1;
     }
 }
-*/
+
 a {
     text-decoration: none;
   }
@@ -31,167 +34,273 @@ a {
 body{
     width: 100%;
     background-color:white;
-    font-family: 'Noto Sans JP';
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: auto;
 }
 
 img{
     width: 100%;
 }
 
-.container{
-    max-width: 750px;
-    margin: auto;
-}
-
-
-
 .sp-header-fixed{
-    height: 80px;
+    max-height: 8rem;
+    border-bottom: min(4vw,3rem) solid #EB5505;
+}
+.sp-header-fixed a{
+    display: flex;
 }
 .sp-header-fixed img{
-    width: auto !important;
-    height: 40px ;
-    margin: 20px 30px;
+    width: 64%;
+    max-width: 48rem;
+    margin: 2rem 0.6%;
+    display: inline-block;
 }
-.menu-icon {
-    color: gray;
-    float: right;
-    margin: 20px 30px; /*サイズうまくいってない。後で修正*/
+
+/* ハンバーガーメニュー*/
+.drawer_hidden {
+    display: none;
 }
+.drawer_open {/* アイコンの設置位置 */
+    top: 5%;
+    right: 5rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+}
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {/* ハンバーガーメニューのアイコン */
+    content: '';
+    display: block;
+    height: 0.5rem;
+    width: 3.6rem;
+    border-radius: 0.3rem;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+}
+.drawer_open span:before {/* 三本線の上の位置 */
+    bottom: 12px;
+}
+.drawer_open span:after {/* 三本線の下の位置 */
+    top: 12px;
+}
+#drawer_input:checked ~ .drawer_open span {/* アイコンがクリックされたら真ん中の線を透明にする */
+    background: rgba(255, 255, 255, 0);
+}
+#drawer_input:checked ~ .drawer_open span::before {/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+.nav_content {/* メニューのデザイン*/
+    width: 30%;
+    height: 200px;
+    position: fixed;
+    top: 0;
+    left: 100%; /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: #fff;
+    transition: .5s;
+}
+.nav_list {/* メニュー黒ポチを消す */
+    list-style: none;
+}
+#drawer_input:checked ~ .nav_content {/* アイコンがクリックされたらメニューを表示 */
+    left: 70%;/* メニューを画面に入れる */
+}
+
+
+
+
+
+
+
 
 .firstview{
-    height: 450px;
-    background-size: 750px;
-    background-image: url(http://www.financial-agency.com/service/wp-content/uploads/2022/08/top.jpg);
+    position: relative;
 }
-
+.firstview-img{
+    max-width: 100%;
+    margin: auto;
+    max-height: 45rem;
+    object-fit: cover;
+}
 .housingloan-logo{
-    margin-left: 55px;
-    padding-top: 45px;
+    position: absolute;
+    top: 10%;
+    margin-left: 6%;
+    width: 51%;
+    max-width: 38rem;
+    background-color: white;
 }
 .jibunbk-logo{
-    width: 170px;
-    padding-left: 5px;
+    max-width: 15rem;
+    width: 22vw;
+    padding: 0.5rem 1rem;
 }
-.housingloan-logo p{
-    font-size: 60px;
-    padding-left: 5px;
-    background-color:rgba(218,95,41,1.0);
-    width: 380px;
-    letter-spacing: 10px;
+h1{
+    font-size: min(8vw,6rem);
+    padding-left: 0.5rem;
+    background-color: #EB5505;
+    letter-spacing: min(1.3vw,1rem);
     text-align: center;
-    font-weight: 700;
+    font-weight: bold;
     color: white;
+}
+
+.emblem{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    max-width: 75rem;
+    margin-top: min(1vw,1rem);
 }
 .kakakucom{
     float: left;
-    width: auto;
-    height: 230px;
-    margin-left: 12px;
-    margin-top: 20px;
+    max-width: 25rem;
+    width: 33%;
+    height: auto;
+    margin-left: min(1vw,1rem);
+    padding-top: min(2vw,1.5rem);
 }
 .oricon{
-    float: left;
-    width: auto;
-    height: 215px;
-    margin-top: 7px;
-    margin-left: 10px;
+    max-width: 18.8rem;
+    height: auto;
+    width: 25%;
+    margin-left: min(1vw,1rem);
 }
 
 /*変動金利*/
 .interestrate{
-    background-color:rgba(255, 242, 204,0.4);
-    width: 700px;
-    height: 300px;
-    margin: auto;
+    background-color: rgba(255, 242, 204,0.4);
+    width: 93%;
+    max-width: 70rem;
+    height: 41vw;
+    max-height: 31rem;
+    margin: min(4vw,3rem) auto;
 }
 .interestrate-text{
-    width: 230px;
     text-align: center;
-    margin-left: 25px;
-    margin-top: 100px;
+    margin-left: min(3.3vw,2.5rem);
+    margin-top: min(14vw,10rem);
     float: left;
 }
 .interestrate-text1{
-    font-size: 35px;
-    font-weight: 700;
+    font-size: min(4.6vw,3.5rem);
+    font-weight: bold;
 }
 .interestrate-text2{
-    font-size: 20px;
-    font-weight: 100;
+    font-size: min(2.6vw,2rem);
+    font-weight: normal;
 }
 
 /*au金利優遇割なら*/
+.interestrate-right{
+    position: absolute;
+    margin-left: min(34vw,26rem);
+    max-width: 44rem;
+}
 .interestrate h4{
     color: white;
-    font-size: 24px;
-    font-weight: 5;
-    margin-left: 37%;
-    margin-top: 30px;
-    width: 320px;
-    border-radius: 30px;
+    font-size: min(3.2vw,2.4rem);
+    font-weight: normal;
+    /* margin-left: 37%; */
+    margin-top: min(4vw,3rem);
+    width: min(42vw,32rem);
+    border-radius: 3rem;
     text-align: center;
-    background-color:rgba(218,95,41,1.0);
+    background-color: #EB5505;
+}
+.interestrate-right p{
+    text-align: right;
+    font-size: min(2.8vw,2rem);
+    font-weight: normal;
 }
 
 .orange{
-    position: relative; 
-    height: 140px;
-    float: left;
+    display: inline-block;
 }
 .orange1{
     color: white;
-    background-color:rgba(218,95,41,1.0);
+    background-color: #EB5505;
     border-radius: 50%;
-    font-size: 30px;
-    padding: 10px;
+    font-size: min(4vw,3rem);
+    padding: min(1.4vw,1rem);
 }
 .orange2{
-    font-size: 94px;
-    color:rgba(218,95,41,1.0);
-    font-weight: 900;
-    transform: scale(0.8, 1);
-    margin-left: 10px;
+    font-size: min(12.5vw,9.4rem);
+    color: #EB5505;
+    font-weight: bold;
+    transform: scale(1, 1.2);
+    display: inline-block;
 }
 .orange3{
-    font-size: 45px;
-    color:rgba(218,95,41,1.0);
-    font-weight: 900;
+    font-size: min(7.3vw,5.5rem);
+    color: #EB5505;
+    font-weight: bold;
+    transform: scale(1, 1.3);
+    display: inline-block;
 }
-.interestrate h5{
-    margin: 30px 0 0 50px;
-    float:left;
-    font-size: 14px;
-    font-weight: 50;
+
+.caution1{
+    margin: auto;
+    width: min(80vw,60rem);
+    font-size: min(3.1vw,2rem);
+    position: absolute;
+    margin-top: min(33vw,25rem);
+    margin-left: min(8vw,6rem);
 }
+.caution1-1{
+    padding-left: min(4vw,3rem);
+    text-indent: max(-4vw,-3rem);
+}
+.caution1-2{
+    display: inline-block;
+    width: min(4vw,3rem);
+    text-indent: 0;
+}
+
 
 h6{
     text-align: right;
-    font-size: 20px;
-    font-weight: 10;
-    margin: 0 10px 40px 0;
+    font-size: min(2.8vw,2rem);
+    font-weight: normal;
+    margin: 0 auto min(5.6vw,4rem) auto;
+    width: 90vw;
+    max-width: 68rem;
 }
 
+.campaign{
+    width: 93vw;
+    max-width: 70rem;
+    margin: min(6vw,5rem) auto;
+}
 .campaign img{
-    display: flex;
-    width: 700px;
-    margin:50px auto 0 auto;
+    width: 100%;
 }
 
 /*仮申込ボタン*/
 .examination p{
+    clear: both;
     text-align: center;
-    font-size: 30px;
+    font-size: min(4vw,3rem);
 }
 .examination-btn{
     position:relative;
-    background-color:rgba(218,95,41,1.0);
-    border-radius: 48px;
+    background-color:#EB5505;
+    border-radius: 4.8rem;
     color: white;
-    width: 650px;
+    max-width: 65rem;
+    width: 85%;
     margin: auto;
-    box-shadow: 7px 7px 0 0 rgba(147,66,25,1.0);
-    margin-bottom: 10px;
+    box-shadow: 0.7rem 0.7rem 0 0 #9F3B03;
+    margin-bottom: 1rem;
 }
 .examination .link{
     display: block;
@@ -202,10 +311,10 @@ h6{
     height: 100%;
 }
 .examination-btn p{
-    font-size: 48px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    padding: 10px 0;
+    font-size: min(6.4vw,4.8rem);
+    font-weight:bold;
+    letter-spacing: min(0.5vw,0.4rem);
+    padding: 1rem 0;
 }
 /*ボタンの右の「>」*/
 .btn1{
@@ -217,9 +326,9 @@ h6{
     margin: auto;
     top: 0;
     bottom: 0;
-    right: 38px;
-    width: 44px; /* 横幅 */
-    height: 44px; /* 高さ */
+    right: min(3.8vw,2.5rem);
+    width: min(6.7vw,4.4rem);
+    height: min(6.7vw,4.4rem);
     border-radius: 50%; /* 角の丸み */
     background: white;
 }
@@ -229,26 +338,26 @@ h6{
     margin: auto;
     top: 0;
     bottom: 0;
-    right: 54px;
-    width: 16px;
-    height: 16px;
-    border-top: 6px solid rgba(218,95,41,1.0);
-    border-right: 6px solid rgba(218,95,41,1.0);
+    right: min(6.1vw,4rem);
+    width: min(2.4vw,1.6rem);
+    height: min(2.4vw,1.6rem);
+    border-top: min(0.9vw,0.6rem) solid #EB5505;
+    border-right: min(0.9vw,0.6rem) solid #EB5505;
     transform: rotate(45deg);
 }
 
 /*電話相談*/
 .telbtn{
-    position:relative;
-    background-color:rgba(218,95,41,1.0);
-    border-radius: 60px;
+    position: relative;
+    background-color: #EB5505;
+    border-radius: 6rem;
     color: white;
-    font-weight:600;
-    width: 650px;
+    font-weight: bold;
     margin: auto;
-    box-shadow: 7px 10px 0 0 rgba(147,66,25,1.0);
-    margin-bottom: 10px;
+    box-shadow: 7px 10px 0 0 #9f3b03;
     text-align: center;
+    max-width: 65rem;
+    width: 85%;
 }
 .telbtn .link2{
     display: block;
@@ -259,61 +368,71 @@ h6{
     height: 100%;
 }
 .btn2{
-    font-size: 48px;
-    padding:10px 0 0 50px;
+    font-size: min(7.3vw,4.8rem);
+    padding: 1rem 0 0 min(7.7vw,5rem);
 }
 .btn3{
-    font-size:30px;
-    padding:0 0 10px 50px ;
+    font-size: min(4.6vw,3rem);
+    padding: 0 0 1rem min(7.7vw,5rem);
 }
 .telicon{
     position: absolute;
     top: 0;
     left: 0;
-    width: 50px;
-    margin: 40px 0 0 45px;
+    width: min(8.4vw,5.5rem);
+    margin: min(6.1vw,4rem) 0 0 min(6.9vw,4.5rem);
 }
 .teltime{
     text-align: center;
-    font-size: 24px;
-    margin: 20px 0 50px 0;
+    font-size: min(3.2vw,2.4rem);
+    margin: 2rem 0 3rem 0;
 }
 
-h1{
-    border-left: 8px solid rgba(218,95,41,1.0);
-    font-size: 32px;
-    height:60px;
-    margin-left: 30px;
-    padding-left: 10px;
+h5{
+    border-left: 0.8rem solid #EB5505;
+    font-size: min(4.2vw,3.2rem);
+    height: 8%;
+    max-height: 60rem;
+    width: 86%;
+    max-width: 65rem;
+    margin: auto;
+    padding: min(0.4vw,0.3rem) min(1.5vw,1rem);
+    margin-bottom: min(1.5vw,1rem);
 }
 
+.merit{
+    width: 93vw;
+    max-width: 70rem;
+    margin: min(6vw,5rem) auto;
+}
 .merit img{
-    display: flex;
-    width: 700px;
-    margin: 30px auto;
+    width: 100%;
 }
 
 h2{
     margin: auto;
-    width: 600px;
-    font-size: 26px;
-    font-weight: 200;
-    margin-bottom: 50px;
+    width: 80%;
+    max-width: 65rem;
+    font-size: min(3.4vw,2.6rem);
+    font-weight: normal;
+    margin-bottom: min(6.6vw,5rem);
 }
 
 .simulation p{
+    clear: both;
     text-align: center;
-    font-size: 30px;
+    font-size: min(4vw,3rem);
 }
 .simulation-btn{
-    position:relative;
-    background-color:rgba(218,95,41,1.0);
-    border-radius: 48px;
+    position: relative;
+    background-color: #EB5505;
+    border-radius: 4.8rem;
     color: white;
-    width: 650px;
+    max-width: 65rem;
+    width: 85%;
     margin: auto;
-    box-shadow: 7px 7px 0 0 rgba(147,66,25,1.0);
-    margin-bottom: 10px;
+    box-shadow: 0.7rem 0.7rem 0 0 #9f3b03;
+    margin-bottom: 1rem;
 }
 .simulation .link2{
     display: block;
@@ -324,77 +443,85 @@ h2{
     height: 100%;
 }
 .simulation-btn p{
-    font-size: 34px;
-    font-weight: 600;
-    letter-spacing: 0px;
-    padding: 20px 0;
+    font-size: min(4.5vw,3.4rem);
+    font-weight: bold;
+    padding: 1rem 0;
 }
 .calculator{
     position: absolute;
     top: 0;
     left: 0;
-    width: 35px;
-    margin: 20px 0 0 45px;
+    width: min(4.2vw,3rem);
+    margin: min(2.8vw,1.2rem) 0 0 min(6vw,4.5rem);
 }
-
+.simulation{
+    margin-bottom: min(4.5vw,3.4rem);
+}
 
 
 
 
 /*ポイントヘッダー*/
 .pointtitle{
-    width: 700px;
-    height: 250px;
-    margin:100px auto 0 auto;
+    width: min(93vw,70rem);
+    height: min(34vw,25rem);
+    margin: min(1.3vw,10rem) auto 0 auto;
     cursor: pointer;
     position: relative;
 }
-.body{
-    margin: auto;
+.pointbody{
+    margin: auto;    
+    margin-bottom: min(15vw,10rem);
 }
 .pointtitle::before,.pointtitle::after{
     content: "";
     display: block;
     position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translate(0, -50%);
-    width: 35px;
-    height: 6px;
-    background: rgba(218,95,41,1.0);
+    /* top: 50%; */
+    /* right: 20px; */
+    /* transform: translate(0, -50%); */
+    width: min(4.6vw,3.5rem);
+    height: min(0.8vw,0.6rem);
+    background: #EB5505;
     transition: 0.2s ease transform;
 }
 .pointtitle::before{
     top:49%;
-    right: 20px;
+    right: 2.8%;
     transform: rotate(0deg);
 }
 .pointtitle::after{
     top:49%;
-    right: 20px;
+    right: 2.8%;
+    transform: rotate(0deg);
+}
+.pointtitle.show::after{
+    top:49%;
+    right: 2.8%;
     transform: rotate(90deg);
 }
 .pointno{
-    width: 200px;
-    background-color:rgba(218,95,41,1.0);
-    font-size: 24px;
-    padding:10px 0 ;
+    width: min(26vw,20rem);
+    background-color: #EB5505;
+    font-size: min(3.4vw,2.4rem);
+    padding: min(5vw,1rem) 0;
     color: white;
     text-align: center;
-    border-radius: 10px;
-    font-weight: 100;    
+    border-radius: 1rem;
+    font-weight: normal;
     z-index: 10000;
     position: relative;
 }
 .pointtext{
     position: absolute;
-    border: 6px solid rgba(218,95,41,1.0);
-    border-radius: 20px;
-    font-size: 22px;
-    margin: -30px 0 100px 0;
-    padding: 35px 0 30px 170px;
-    line-height:60px;
-    width: 518px;
+    border: min(0.8vw,0.6rem) solid #EB5505;
+    border-radius: 2rem;
+    font-size: min(2.9vw,2.2rem);
+    margin-top: max(-6vw,-3rem);
+    padding: 5% 0 4.3% 24.3%;
+    line-height: min(8.5vw,6rem);
+    max-width: 70rem;
+    width: 74%;
 }
 .dot-text{
     position: relative;
@@ -412,243 +539,267 @@ h2{
     background: -moz-radial-gradient(circle 5px,black 50%,transparent 50%);
 }
 .orange4{
-    font-size: 36px;
-    font-weight: 900;
-    color:rgba(218,95,41,1.0);
+    color: #EB5505;
+    font-weight: bold;
+    font-size: min(5.1vw,3.6rem);
+    display: inline-block;
 }
 .pointimg{
     float: left;
-    width: 120px;
-    margin: 10px 0 0 25px;
+    width: 18%;
+    margin: 1.4% 0 0 3.5%;
 }
 
 /*ポイント1の表*/
 .point1table table{
     border-collapse: collapse;
-    width: 700px; 
-    max-width: 100%;
-    margin:auto;
-    text-align: center; 
-    white-space: nowrap; 
+    width: 86%;
+    max-width: 65rem;
+    margin: auto;
+    text-align: center;
+    white-space: nowrap;
+    font-size: min(3vw,2rem);
 }
-.point1table th,td{
-    padding: 5px;
+.point1table th,.point1table td{
+    padding: min(1.5vw,1rem);
     border: 1px solid rgb(25, 25, 25);
 }
 .merging{
-    border-top:0px;
-    border-bottom: 0px;
+    border-bottom: 0px!important;
 }
 .merging2{
     width: 7%;
-    border-top:0px;
-    border-bottom:1px solid rgb(25, 25, 25);
+    border-top: 0px !important;
 }
 .point1table th{
     background-color:rgb(127, 127, 127);
     color: white;
-    padding:10px ;
 }
 .th1{
-    font-size: 36px;
+    font-size: min(5.5vw,3.6rem);
     line-height:1;
 }
 .th2{
-    font-size: 20px;
-    font-weight: 100;
+    font-size: min(3vw,2rem);
+    font-weight: normal;
 }
 .torange{
-    color:rgba(218,95,41,1.0);
-    font-size: 48px;
+    color: #EB5505;
+    font-size: min(6.7vw,4.4rem);
     font-weight: bolder;
-    transform: scale(0.6, 1);
+    transform: scale(1, 1.2);
+    display: inline-block;
+}
+.inline-title{
+    line-height: 1;
 }
 .tblack{
-    font-size: 36px;
+    font-size: min(4.9vw,3.2rem);
     font-weight: bold;
+    transform: scale(1, 1.2);
+    display: inline-block;
 }
 .tblack2{
-    font-size: 12px;
-    line-height:1;
+    font-size: min(1.8vw,1.2rem);
+    line-height: 1;
 }
 
 .point1text{
-    border: 3px solid rgba(218,95,41,1.0);
+    border: 3px solid #EB5505;
     margin: auto;
-    margin-bottom: 100px;
-    width: 650px;
-    font-size: 20px;
+    width: 86%;
+    max-width: 65rem;
+    font-size: min(5.5vw,3.6rem);
     padding: 10px;
 }
 .point1text ul{
-    margin-left: 40px;
+    margin-left: min(6.1vw,4rem);
+    font-size: min(4.6vw,3rem);
 }
 
 
+
+
 .point2subtitle{
-    margin:30px auto;
-    width: 650px;
+    margin: min(4vw,3rem) auto;
+    width: 86%;
+    max-width: 65rem;
     background-color: #F2F2F2;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 .point2subtitle p{
     display: inline-block;
 }
 .point2notext{
-    font-size: 34px;
+    font-size: min(5.2vw,3.4rem);
     text-align: left;
-    padding: 10px 30px;
+    padding: min(1.5vw,1rem) min(4.6vw,3rem);
 }
 .right0en{
-    color:rgba(218,95,41,1.0);
-    font-size: 45px;
+    color: rgba(218,95,41,1.0);
+    font-size: min(6.9vw,4.5rem);
     font-weight: bolder;
     float: right;
-    padding: 3px 20px;
+    padding: min(0.4vw,0.3rem) min(3vw,2rem);
 }
 
 .point2 h2{
-    margin-bottom: 20px;
+    margin-bottom: min(2.6vw,2rem);
 }
+
+
 .point2table table{
     border-collapse: collapse;
-    width: 650px; 
-    max-width: 100%;
+    width: 86%; 
+    max-width: 65rem;
     margin:auto;
     text-align: center; 
     white-space: nowrap;
-    font-size: 20px;
+    font-size: min(3vw,2rem);
 }
-.point2table th,td{
-    padding: 10px;
+.point2table th,.point2table td{
+    padding: min(1.5vw,1rem);
+    border: 1px solid rgb(25, 25, 25);
+}
+.merging3{
+    border-top: 0px!important;
+    border-left: 0px!important;
 }
 .point2table ul{
-    padding-left: 20px;
+    padding-left: min(3vw,2rem);
     text-align: left;
+    font-size: min(4.6vw,3rem);
 }
 .torange2{
-    color:rgba(218,95,41,1.0);
-    font-size: 24px;
+    color:#EB5505;
+    font-size: min(3.6vw,2.4rem);
     font-weight: bolder;
-    transform: scale(0.6, 1);
 }
 .tblack3{
     font-weight: bold;
-    font-size: 28px;
+    font-size: min(4.3vw,2.8rem);
 }
-.th3{
-    border: 1px solid rgb(25, 25, 25);
+.th4{
     background-color: #7F7F7F;
     color: white;
     font-weight: normal;
-    height: 50px;
+    height: min(6.6vw,5rem);
 }
 
-.caution{
-    width: 600px;
-    margin: auto;
-    font-size: 14px;
-    margin-bottom: 70px;
-}
-.caution1{
-    padding-left:40px; /* ケースによって調整する */
-	text-indent:-40px; /* ケースによって調整する */
-}
 .caution2{
+    width: 80%;
+    max-width: 60rem;
+    margin: auto;
+    font-size: min(3.6vw,2.2rem);
+}
+.caution2-1{
+    padding-left: min(6.6vw,4rem);
+    text-indent: max(-6.6vw,-4rem);
+}
+.caution2-2{
     display: inline-block;
-	width: 40px; /* ケースによって調整する */
-	text-indent: 0;
+    width: min(6.6vw,4rem);
+    text-indent: 0;
 }
 
 
 .steptitle{
     background-color: #FBE5D6;
-    width: 620px;
+    width: 82%;
+    max-width: 62rem;
     margin: auto;
     text-align: center;
-    font-size: 20px;
-    padding: 10px;
+    font-size: min(4.8vw,3rem);
+    padding: min(1.6vw,1rem) 0;
+    position: relative;
 }
 .stepno{
-    font-size: 14px;
-    background-color: rgba(218,95,41,1.0);
+    font-size: min(1.8vw,1.4rem);
+    background-color: #EB5505;
     color: white;
-    border-radius: 14px;
-    width: 120px;
+    border-radius: 1.4rem;
+    width: min(16vw,12rem);
     text-align: center;
     float: left;
-    margin-left: 20px;
-    padding: 3px;
+    margin-left: min(2.6vw,2rem);
+    padding: min(0.4vw,0.3rem) 0;
     position: relative;
 }
 .stepturn1{
-    position:absolute;
-    width: 50px;
-    height: 380px;
+    position: absolute;
+    top: 0;
+    width: min(6.6vw,5rem);
+    height: min(48vw,36rem);
     background-color: #FBE5D6;
-    margin-left: -10px;
+    z-index: -10000;
 }
 .stepturn2{
     position: absolute;
     width: 0;
     height: 0;
-    border: 42px solid;
-    border-color:  #FBE5D6 transparent transparent transparent;
-    margin:380px 0 0 -27px ;
+    border: min(5.6vw,4.2rem) solid;
+    border-color: #FBE5D6 transparent transparent transparent;
+    top: 0;
+    margin-top: min(48vw,36rem);
+    margin-left: max(-2.4vw,-1.8rem);
 }
 .stepblock{
-    margin: 20px auto;
+    margin: min(2.6vw,2rem) auto;
+    max-width: 73rem;
+    width: 97%;
 }
 .steptext{
-    margin-left: 170px;
-    padding: 10px 20px;
-    width: 480px;
+    margin-left: 1.5rem;
+    padding: min(1.3vw,1rem) min(2.6vw,2rem);
+    width: 64%;
+    max-width: 48rem;
     background-color: #F2F2F2;
-    font-size: 20px;
+    font-size: min(2.6vw,2rem);
+    position: relative;
+    display: inline-block;
 }
 .steptext1{
     font-weight: bold;
 }
 .steptext2{
     font-weight: normal;
-    font-size: 17px;
+    font-size: min(2.2vw,16px);
 }
 .orange5{
-    color: rgba(218,95,41,1.0);
+    color: #EB5505;
 }
 .steptext3{
-    font-size: 10px;
+    font-size: min(1.3vw,1rem);
 }
 .stepend{
     background-color: #FBE5D6;
-    width: 650px;
+    width: 86%;
+    max-width: 65rem;
     margin: auto;
     text-align: center;
-    font-size: 20px;
-    padding: 10px;
+    font-size: min(4vw,3rem);
+    padding: min(1.3vw,1rem);
     font-weight: bold;
-    margin-bottom: 20px;
-}
-.step caution{
-    margin-bottom: 100px;
+    margin-bottom: min(4vw,3rem) ;
 }
 
+
+
+
+/*企業情報*/
 .corporate-info{
-    margin-top: 100px;
+    margin-top: min(13vw,10rem);
 }
-
-
-
 .corp-table table{
     border-collapse: collapse;
-    width: 630px; 
-    max-width: 100%;
-    margin:auto;
-    text-align: left; 
-    font-size: 14px;
+    width: 84%;
+    max-width: 63rem;
+    margin: auto;
+    text-align: left;
+    font-size: min(2.2vw,1.4rem);
 }
-.corp-table th,td{
-    padding: 10px;
+.corp-table th, .corp-table td{
+    padding: min(1.5vw,1rem);
     border: 1px solid black;
 }
 .corp-table th{
@@ -658,34 +809,41 @@ h2{
     width: 35%;
 }
 .corp-table ul{
-    padding-left: 20px;
+    padding-left: 2rem;
     text-align: left;
 }
 .corp-table-list1{
+    font-size: min(3.1vw,2rem);
     list-style:none;
 }
 .corp-table-list1 li{
-    padding-left:30px; /* ケースによって調整する */
-	text-indent:-30px; /* ケースによって調整する */
+    padding-left:min(4.7vw,3rem); /* ケースによって調整する */
+	text-indent:max(-4.7vw,-3rem); /* ケースによって調整する */
 }
 .corp-table-list1 span{
     display: inline-block;
-	width: 30px; /* ケースによって調整する */
+	width: min(4.7vw,3rem); /* ケースによって調整する */
 	text-indent: 0;
 }
 .corp-table-list2{
+    font-size: min(3.1vw,2rem);
     list-style:none;
 }
 .corp-table-list2 li{
-    padding-left:30px; /* ケースによって調整する */
-	text-indent:-30px; /* ケースによって調整する */
+    padding-left:min(4.7vw,3rem); /* ケースによって調整する */
+	text-indent:max(-4.7vw,-3rem); /* ケースによって調整する */
 }
 .corp-table-list2 span{
     display: inline-block;
-	width: 30px; /* ケースによって調整する */
+	width: min(4.7vw,3rem); /* ケースによって調整する */
 	text-indent: 0;
 }
 
 .disclosure{
-    margin:30px 0 150px 80px;
+    width: 84%;
+    max-width: 63rem;
+    margin: 3rem auto 15rem auto;
+}
+.disclosure p{
+    font-size: min(2.6vw,2rem);
 }
