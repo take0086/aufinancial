@@ -655,7 +655,7 @@ h2{
 }
 .point1table sup{
     vertical-align: top;
-    margin-left: max(-2.6vw,-2rem);
+    /*margin-left: max(-2.6vw,-2rem);*/
 }
 /*
 .inline-title{
