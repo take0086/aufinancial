@@ -269,6 +269,7 @@ h1{
 }
 .orange{
     margin-top: min(2.6vw,2rem);
+    display: inline-block;
 }
 .orange1{
     color: white;
@@ -296,7 +297,13 @@ h1{
 }
 .orange sup{
     vertical-align: top;
+    position: absolute;
+    margin-left: max(-5.3vw,-4rem);
 }
+.interestrate-text3{
+    text-align: right;
+}
+
 .caution1{
     margin: auto;
     width: min(80vw,60rem);
