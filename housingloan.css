@@ -124,13 +124,16 @@ img{
 
 .firstview{
     position: relative;
+    background-color: #FDFDFD;
+    background: linear-gradient(150deg, #FDFDFD 33%, #F1F2F7);
 }
 .firstview-img{
-    max-width: 100%;
+    max-width: 75rem;
     margin: auto;
     max-height: 45rem;
-    object-fit: cover;
-    object-position: top;
+    /* object-fit: cover; */
+    /* object-position: top; */
+    display: block;
 }
 .firstview-block{
     max-width: 75rem;
@@ -139,7 +142,7 @@ img{
 .housingloan-logo{
     position: absolute;
     top: 6%;
-    margin-left: 6%;
+    margin-left: min(6vw,4rem);
     width: 51%;
     max-width: 38rem;
     background-color: white;
@@ -163,7 +166,7 @@ h1{
     position: absolute;
     top: 37%;
     width: 51%;
-    margin-left: 6%;
+    margin-left: min(6vw,4rem);
     max-width: 38rem;
     margin-top: min(1vw,1rem);
 }
