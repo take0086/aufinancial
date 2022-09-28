@@ -42,14 +42,14 @@ img{
     width: 100%;
 }
 
-.sp-header-fixed{
+.header-fixed{
     max-height: 8rem;
     border-bottom: min(4vw,3rem) solid #EB5505;
 }
-.sp-header-fixed a{
+.header-fixed a{
     display: flex;
 }
-.sp-header-fixed img{
+.header-fixed img{
     width: 64%;
     max-width: 48rem;
     margin: min(2.6vw,2rem) 4%;
@@ -130,6 +130,7 @@ img{
     margin: auto;
     max-height: 45rem;
     object-fit: cover;
+    object-position: top;
 }
 .firstview-block{
     max-width: 75rem;
@@ -137,7 +138,7 @@ img{
 }
 .housingloan-logo{
     position: absolute;
-    top: 10%;
+    top: 6%;
     margin-left: 6%;
     width: 51%;
     max-width: 38rem;
@@ -160,24 +161,64 @@ h1{
 
 .emblem{
     position: absolute;
-    top: 40%;
-    width: 100%;
-    max-width: 75rem;
+    top: 37%;
+    width: 51%;
+    margin-left: 6%;
+    max-width: 38rem;
     margin-top: min(1vw,1rem);
 }
-.kakakucom{
+/*
+.kakakucom-img{ 
     float: left;
-    max-width: 25rem;
-    width: 33%;
+    max-width: 12rem;
+    width: 31.5%;
     height: auto;
-    margin-left: min(1vw,1rem);
-    padding-top: min(2vw,1.5rem);
+    margin-left: min(8vw,3.5rem);
 }
-.oricon{
-    max-width: 18.8rem;
+.oricon-img{
+    max-width: 12rem;
     height: auto;
-    width: 25%;
-    margin-left: min(1vw,1rem);
+    width: 31.5%;
+    margin-left: min(8vw,7rem);
+}
+.emblem-text{
+    font-size: min(2.6vw,2rem);
+    font-weight: bold;
+    text-align: center;
+    height: auto;
+    display: flex;
+}
+.kakakucom-text{
+    border: 1px solid black;
+    margin-left: min(2.6vw,1rem);
+    max-width: 17rem;
+    width: 43.5%;
+    padding: min(0.78vw,0.3rem) 0;
+}
+.oricon-text{
+    border: 1px solid black;
+    margin-left: min(2.6vw,2rem);
+    max-width: 17rem;
+    width: 43.5%;
+    align-self: center;
+    padding: min(0.78vw,0.3rem) 0;
+}
+
+.caution3{
+    margin: min(2.6vw,1rem) auto;
+    font-size: min(2.6vw,1rem);
+}
+.caution3-1{
+    padding-left: min(4vw,3rem);
+    text-indent: max(-4vw,-3rem);
+}
+.caution3-2{
+    display: inline-block;
+    width: min(4vw,3rem);
+    text-indent: 0;
+}*/
+.emblem-img{
+    height: auto;
 }
 
 /*変動金利*/
@@ -185,16 +226,14 @@ h1{
     background-color: rgba(255, 242, 204,0.4);
     width: 93%;
     max-width: 70rem;
-    /* height: 41vw; */
-    /* max-height: 31rem; */
     margin: min(4vw,3rem) auto;
+    display: flex;
 }
 .interestrate-text{
     text-align: center;
     margin-left: min(3.3vw,2.5rem);
     margin-top: min(14vw,10rem);
     margin-bottom: min(8.6vw,6.5rem);
-    float: left;
 }
 .interestrate-text1{
     font-size: min(4.6vw,3.5rem);
@@ -207,15 +246,13 @@ h1{
 
 /*au金利優遇割なら*/
 .interestrate-right{
-    position: absolute;
-    margin-left: min(38vw,27rem);
     max-width: 44rem;
+    margin-left: min(2.8vw,2rem);
 }
 .interestrate h4{
     color: white;
     font-size: min(3.2vw,2.4rem);
     font-weight: normal;
-    /* margin-left: 37%; */
     margin-top: min(4vw,3rem);
     width: min(42vw,32rem);
     border-radius: 3rem;
@@ -228,7 +265,7 @@ h1{
     font-weight: normal;
 }
 .orange{
-    display: inline;
+    margin-top: min(2.6vw,2rem);
 }
 .orange1{
     color: white;
@@ -245,6 +282,7 @@ h1{
     font-weight: bold;
     transform: scale(1, 1.2);
     display: inline-block;
+    line-height: min(13vw,10rem);
 }
 .orange3{
     font-size: min(7.3vw,5.5rem);
@@ -254,18 +292,12 @@ h1{
     display: inline-block;
 }
 .orange sup{
-    position: absolute;
-    right: 0;
+    vertical-align: top;
 }
 .caution1{
     margin: auto;
     width: min(80vw,60rem);
-    font-size: min(3.1vw,2rem);
-    /* position: absolute; */
-    /* margin-top: min(33vw,25rem); */
-    /* margin-left: min(8vw,6rem); */
-    clear: both;
-    /* margin-bottom: 10px; */
+    font-size: min(3vw,2.3rem);
     padding-bottom: min(3.1vw,2rem);
 }
 .caution1-1{
@@ -298,6 +330,9 @@ h6{
 }
 
 /*仮申込ボタン*/
+.examination{
+    margin-top:min(6vw,5rem)  ;
+}
 .examination p{
     clear: both;
     text-align: center;
@@ -323,7 +358,7 @@ h6{
     height: 100%;
 }
 .examination-btn p{
-    font-size: min(6.4vw,4.8rem);
+    font-size: min(4.8vw,3.6rem);
     font-weight:bold;
     letter-spacing: min(0.5vw,0.4rem);
     padding: 1rem 0;
@@ -380,7 +415,7 @@ h6{
     height: 100%;
 }
 .btn2{
-    font-size: min(7.3vw,4.8rem);
+    font-size: min(4.8vw,3.6rem);
     padding: 1rem 0 0 min(7.7vw,5rem);
 }
 .btn3{
@@ -392,7 +427,7 @@ h6{
     top: 0;
     left: 0;
     width: min(8.4vw,5.5rem);
-    margin: min(6.1vw,4rem) 0 0 min(6.9vw,4.5rem);
+    margin: min(4vw,3rem) 0 0 min(5.3vw,4rem);
 }
 .teltime{
     text-align: center;
@@ -407,15 +442,19 @@ h5{
     max-height: 60rem;
     width: 86%;
     max-width: 65rem;
-    margin: auto;
+    margin: min(8vw,6rem) auto min(1.5vw,1rem) auto;
     padding: min(0.4vw,0.3rem) min(1.5vw,1rem);
-    margin-bottom: min(1.5vw,1rem);
 }
 
 .merit{
     width: 93vw;
     max-width: 70rem;
     margin: min(6vw,5rem) auto;
+}
+.merit p{
+    text-align: right;
+    font-size: min(1.5vw,1rem);
+    color: #7F7F7F;
 }
 .merit img{
     width: 100%;
@@ -428,6 +467,7 @@ h2{
     font-size: min(3.4vw,2.6rem);
     font-weight: normal;
     margin-bottom: min(6.6vw,5rem);
+    margin-top: min(1.3vw,1rem);
 }
 
 .simulation p{
@@ -490,9 +530,6 @@ h2{
     content: "";
     display: block;
     position: absolute;
-    /* top: 50%; */
-    /* right: 20px; */
-    /* transform: translate(0, -50%); */
     width: min(4.6vw,3.5rem);
     height: min(0.8vw,0.6rem);
     background: #EB5505;
@@ -525,7 +562,18 @@ h2{
     z-index: 10000;
     position: relative;
 }
-.pointtext{
+.pointtext1{
+    position: absolute;
+    border: min(0.8vw,0.6rem) solid #EB5505;
+    border-radius: 2rem;
+    font-size: min(2.9vw,2.2rem);
+    margin-top: max(-6vw,-3rem);
+    padding-left: 24.3%;
+    line-height: min(24.5vw,18.5rem);
+    max-width: 70rem;
+    width: 74%;
+}
+.pointtext2{
     position: absolute;
     border: min(0.8vw,0.6rem) solid #EB5505;
     border-radius: 2rem;
@@ -577,6 +625,7 @@ h2{
     padding: min(1.5vw,1rem);
     border: 1px solid rgb(25, 25, 25);
 }
+/*
 .merging{
     border-bottom: 0px!important;
 }
@@ -584,6 +633,7 @@ h2{
     width: 7%;
     border-top: 0px !important;
 }
+*/
 .point1table th{
     background-color:rgb(127, 127, 127);
     color: white;
@@ -603,6 +653,11 @@ h2{
     transform: scale(1, 1.2);
     display: inline-block;
 }
+.point1table sup{
+    vertical-align: top;
+    margin-left: min(-2.6vw,-2rem);
+}
+/*
 .inline-title{
     line-height: 1;
 }
@@ -616,7 +671,7 @@ h2{
     font-size: min(1.8vw,1.2rem);
     line-height: 1;
 }
-
+*/
 .point1text{
     border: 3px solid #EB5505;
     margin: auto;
@@ -637,7 +692,19 @@ h2{
     width: 25%;
     margin: 1.4% 0 0 2%;
 }
-
+.point2top{
+    max-width: 66rem;
+    width: 88%;
+    display: flex;
+    margin: auto;
+}
+.point2toptext{
+    width: 55%;
+    font-size: min(3.4vw,2.6rem);
+}
+.point2topimg{
+    width: 45%;
+}
 .point2subtitle{
     margin: min(4vw,3rem) auto;
     width: 86%;
@@ -666,6 +733,9 @@ h2{
 }
 
 
+.point2table{
+    margin-bottom: min(3vw,2rem);;
+}
 .point2table table{
     border-collapse: collapse;
     width: 86%; 
@@ -871,4 +941,50 @@ h2{
 }
 .disclosure p{
     font-size: min(2.6vw,2rem);
+}
+
+.notes ul{
+    width: 84%;
+    max-width: 63rem;
+    margin: 2rem auto 5rem auto;
+    font-size: min(4vw,3rem);
+    list-style-position: inside;
+}
+
+h3{
+    font-size: min(4.2vw,3.2rem);
+    height: 8%;
+    max-height: 60rem;
+    width: 86%;
+    max-width: 65rem;
+    margin: min(8vw,6rem) auto min(1.5vw,1rem) auto;
+    padding: min(0.4vw,0.3rem) min(1.5vw,1rem);
+}
+
+.gotop-btn{
+    position:relative;
+    background-color:#A6A6A6;
+    border-radius: 4.8rem;
+    color: white;
+    max-width: 65rem;
+    width: 85%;
+    margin: auto;
+    box-shadow: 0.7rem 0.7rem 0 0 #9F3B03;
+    margin-bottom: 1rem;
+    margin-bottom: 5rem;
+}
+.gotop-btn p{
+    text-align: center;
+    font-size: min(4.8vw,3.6rem);
+    font-weight:bold;
+    letter-spacing: min(0.5vw,0.4rem);
+    padding: 1rem 0;
+}
+.gotop-btn .link{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
