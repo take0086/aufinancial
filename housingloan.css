@@ -192,10 +192,12 @@ nav.flex {
 .nav_children li a {
   font-weight: 500;
   font-size: 1.2rem;
-  line-height: 4.0rem;
-  text-align: center;
+  line-height: 1.8rem;
+  padding: 10px 10px;
+  text-align: left;
   color: #333;
   transition: all 0.3s;
+  display: block;
 }
 .nav_children li a:hover {
   background-color: #EEEEEE;
