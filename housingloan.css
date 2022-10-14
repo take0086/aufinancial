@@ -103,7 +103,7 @@ nav.flex {
   touch-action: manipulation;
 } */
 .header_logobox img {
-  max-height: 25px;
+  max-height: 18px;
   align-items: center;
 }
 .header_nav_lists a img {
