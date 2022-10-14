@@ -214,7 +214,7 @@ nav.flex {
   line-height: calc(0.25rem + 1em + 0.25rem);
 }
 .breadcrumbs {
-  width: 100%;
+  /* width: 100%; */
   background-color: #686868;
   padding: 10px 30px;
   font-weight: 500;
