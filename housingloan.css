@@ -746,7 +746,7 @@ h2{
 }
 .dot-text::before{
   position: absolute;
-  top: max(-3vw,-1rem);
+  top: max(-1.6vw,-1.2rem);
   left: 0;
   right: 0;
   margin: auto;
