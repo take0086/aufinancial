@@ -34,7 +34,6 @@ a {
 body{
     width: 100%;
     background-color:white;
-    /* font-family: 'Noto Sans JP', sans-serif; */
     font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     margin: auto;
     font-weight: 500;
@@ -196,7 +195,7 @@ h1{
   width: 100%;
   margin: 0 auto;
   height: 37vw;
-  background: no-repeat center center/100% url(http://www.financial-agency.com/service/wp-content/uploads/2022/10/housingloan_pc-scaled.jpg);
+  background: no-repeat center center/100% url(http://www.financial-agency.com/service/wp-content/uploads/2022/10/housingloan_PC-1-scaled.jpg);
 }
 
 
@@ -1122,7 +1121,7 @@ margin-top: -17px!important;
     width: 100%;
     margin: 0 auto; */
     height: 59.2vw;
-    background: no-repeat center center/100% url(http://www.financial-agency.com/service/wp-content/uploads/2022/10/housingloan_sp-1-scaled.jpg);
+    background: no-repeat center center/100% url(http://www.financial-agency.com/service/wp-content/uploads/2022/10/housingloan_SP-scaled.jpg);
   }
   .breadcrumbs {
     margin-top: 50px;
