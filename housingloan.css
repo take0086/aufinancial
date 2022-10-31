@@ -602,7 +602,7 @@ h2{
   right: 0;
   margin: auto;
   content: "";
-  padding-top: 1.5rem;
+  padding-top: min(2vw,1.5rem);
   background: -webkit-radial-gradient(circle min(0.6vw,0.5rem),black 50%,transparent 50%);
   background: radial-gradient(circle min(0.6vw,0.5rem),black 50%,transparent 50%);
   background: -moz-radial-gradient(circle min(0.6vw,0.5rem),black 50%,transparent 50%);
