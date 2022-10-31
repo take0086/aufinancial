@@ -411,6 +411,7 @@ h6{
 .btn3{
   font-size: min(4.6vw,3rem);
   padding: 0 0 1rem min(7.7vw,5rem);
+  color: white;
 }
 .telicon{
   position: absolute;
